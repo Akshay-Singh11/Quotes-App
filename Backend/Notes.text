@@ -1,0 +1,78 @@
+Commands Backend Setup  :--
+npm init -y
+npm i express nodemon mongoose
+npm start
+
+CORS is a node.js package for providing a Connect/Express middleware that can be used to enable CORS with various options.
+
+        Express Code app.js:--
+        const express = require('express');
+        const app = express();
+
+        app.listen(8080, () => {
+            console.log("server connected at port : 8080")
+        })
+
+
+        mongoose:--
+mongosh
+
+test> show dbs
+India             48.00 KiB
+Shopping-App      72.00 KiB
+admin             40.00 KiB
+assignment_db    144.00 KiB
+config            72.00 KiB
+feblive            8.00 KiB
+gla-rg2           44.00 KiB
+local             88.00 KiB
+quotesApp         40.00 KiB
+sports-club       72.00 KiB
+test              80.00 KiB
+web-Development    8.00 KiB
+test> show collections
+passwords
+products
+test> use quotesApp
+switched to db quotesApp
+quotesApp> show collections
+quotes
+quotesApp> db.quotes.find()
+[
+  {
+    _id: ObjectId('673a2aa35d6966d0134e6df7'),
+    author: 'Akshay Singh ',
+    text: 'A small aim is a crime.',
+    __v: 0
+  },
+  {
+    _id: ObjectId('673a2aa35d6966d0134e6df8'),
+    author: 'Harshit Barua',
+    text: 'We are kept from our goal not by obstacles but by a clear path to a lesser goal.',
+    __v: 0
+  },
+  {
+    _id: ObjectId('673a2aa35d6966d0134e6df9'),
+    author: 'Harshit Choudhary',
+    text: 'All glory comes from daring to begin .',
+    __v: 0
+  },
+  {
+    author: 'Harsh Aggrwal',
+    text: 'Stay away from those people who try to disparage your ambitions.', 
+    __v: 0
+  },
+  {
+    _id: ObjectId('673a2aa35d6966d0134e6dfb'),
+    author: 'Akshay Singh',
+    text: 'Never Say Lie Those People Who  Always  Loves You',
+    __v: 0
+  }
+]
+
+        APIs:-
+
+        apis works data send it to frontend. 
+        routes works pages send it to frontend.
+
+        

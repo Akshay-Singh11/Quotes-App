@@ -1,0 +1,84 @@
+/* Reset default styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Now, apply the font */
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+
+/* Navigation bar styling */
+.nav {
+  background: linear-gradient(90deg, rgb(100, 214, 208), rgb(45, 130, 180));
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  min-height: 70px;
+  font-size: 28px;
+  font-family: 'Roboto', sans-serif;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Title Styling */
+.nav h2 {
+  color: #fff;
+  font-size: 2em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  font-weight: 700; /* Use the bold weight */
+}
+
+/* Navigation Links Container */
+.nav ul {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+  align-items: center;
+}
+
+/* Links Styling */
+.nav a {
+  text-decoration: none;
+  color: #fff;
+  /* font-weight: bold; */
+  font-weight: 400; 
+  font-size: 1.2em;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Link Hover Effects */
+.nav a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav {
+    font-size: 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 10px;
+  }
+
+  .nav h2 {
+    margin-bottom: 10px;
+  }
+}
