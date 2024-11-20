@@ -3,11 +3,7 @@ const app = express();
 const mongoose = require('mongoose');
 const seedDB = require('./seed');
 const cors = require('cors');
-const serverless = require('serverless-http');
-
 const quotesRoute = require("./apis/quoteRoutes");
-
-
 
 app.use(cors());
 app.use(cors({origin:['http://localhost:5173']}));
@@ -32,4 +28,3 @@ app.listen(8080 , ()=>{
     console.log("server connected at port : 8080")
 })
 
-module.exports.handler = serverless(app);
