@@ -5,12 +5,6 @@
   box-sizing: border-box;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
-/* Now, apply the font */
-body {
-  font-family: 'Roboto', sans-serif;
-}
 
 
 /* Navigation bar styling */
