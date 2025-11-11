@@ -4,12 +4,14 @@ const mongoose = require('mongoose');
 const seedDB = require('./seed');
 const cors = require('cors');
 const quotesRoute = require("./apis/quoteRoutes");
+const dotenv = require('dotenv');
+dotenv.config();
 
 app.use(cors());
 app.use(cors({origin:['http://localhost:5173']}));
 app.use(express.json());
 
-mongoose.connect('mongodb://127.0.0.1:27017/quotesApp')
+mongoose.connect(process.env.MONGO_URL)
 .then(()=>{console.log("DB CONNECTED")})
 .catch((err)=>{console.log("DB not CONNECTED" , err)})
 
